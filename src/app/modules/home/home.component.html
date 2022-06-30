@@ -1,0 +1,102 @@
+
+  <div class="header-image-wrapper">
+    <div
+    class="p-5 text-center bg-image bg"
+    style="
+      background-image: url('assets/img/intro-bg.jpg');
+      height: 371px;
+    "
+  >
+  </div> 
+</div>
+
+<div class="p-5 text-center bg-custom-1">
+  <h1 class="mb-3 desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+</div>
+
+<div class="container py-5">
+
+  <div class="row mb-2">
+    <div class="col-md-12 text-center mb-4">
+      <h1 class="h1 fw-bold headline-text mx-auto">SERVICES</h1>
+    </div>
+  </div>
+  <div class="row pt-2 mx-auto">
+    <div class="col-md-4">
+      <div class="nga-card mb-3">
+        <a routerLink="/">
+          <div class="card-body">
+            <i class="fas fa-handshake-simple fa-icon icon-color"></i>
+            <h4 class="fw-bold box-title">BUSINESS SETUP</h4>
+            <br>
+            <p class="card-text">Get a full range of business setup solutions from the region's finest busines setup experts...</p>
+            <button class="btn btn-custom-1 me-2">LEARN MORE</button>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="nga-card mb-3">
+        <a routerLink="/">
+          <div class="card-body">
+            <i class="fas fa-money-bills fa-icon icon-color"></i>
+            <h4 class="fw-bold box-title">BANKING</h4>
+            <br>
+            <p class="card-text">Enhance your business with a wide range of financial assistance at your fingertips. Services...</p>
+            <button class="btn btn-custom-1 me-2">LEARN MORE</button>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="nga-card bg-custom-1 dark-bg mb-3">
+        <a routerLink="/">
+          <div class="card-body">
+            <i class="fas fa-newspaper fa-icon icon-color"></i>
+            <h4 class="fw-bold box-title">INSURANCE</h4>
+            <br>
+            <p class="card-text">Compare the best insurance deals from a wide range of options. Get home, health, business...</p>
+            <button class="btn btn-custom-1 me-2">LEARN MORE</button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row pt-2">
+<div class="col-md-6 footer-image-wrapper">
+  <div
+  class="p-5 text-center bg-image bg"
+  style="
+    background-image: url('assets/img/footer-bg.jpg');
+    height: 537px;
+  "
+>
+</div> 
+</div>
+<div class="col-md-6" [formGroup]="contactForm">
+  <div class="contact-form">
+    <h2 class="fw-bold">CONTACT US</h2>
+  </div>
+  <div class="form-group mx-auto">
+    <label class="form-label fw-bold">Full Name</label>
+    <input class="form-control" formControlName="fullName" required>
+  </div>
+  <br>
+  <div class="form-group mx-auto">
+    <label class="form-label fw-bold">Mobile</label>
+    <input class="form-control" formControlName="mobile" required>
+  </div>
+  <br>
+  <div class="form-group mx-auto">
+    <label class="form-label fw-bold">Email</label>
+    <input type="email" class="form-control" formControlName="email" required>
+  </div>
+  <br>
+  <button type="button" (click)="onSubmit()" class="btn contact-form btn-custom-2 btn-lg me-2 fw-bold">SUBMIT</button>
+  <br><br>
+  <div *ngIf="emailSent" class="alert alert-success form-group mx-auto" role="alert">
+    Your message was sent successfuly!
+  </div>
+  </div>
+</div> 

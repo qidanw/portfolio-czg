@@ -1,0 +1,138 @@
+[debug] [2022-06-30T21:21:47.908Z] ----------------------------------------------------------------------
+[debug] [2022-06-30T21:21:47.916Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Waleed Qidan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2022-06-30T21:21:47.917Z] CLI Version:   10.9.2
+[debug] [2022-06-30T21:21:47.917Z] Platform:      win32
+[debug] [2022-06-30T21:21:47.918Z] Node Version:  v16.15.1
+[debug] [2022-06-30T21:21:47.924Z] Time:          Fri Jul 01 2022 01:21:47 GMT+0400 (Gulf Standard Time)
+[debug] [2022-06-30T21:21:47.925Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-30T21:21:48.060Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-30T21:21:48.060Z] > authorizing via signed-in user (intermatter@volcatech.com)
+[debug] [2022-06-30T21:21:48.061Z] [iam] checking project portfolio-czg for permissions ["firebase.projects.get"]
+[debug] [2022-06-30T21:21:48.064Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-czg:testIamPermissions [none]
+[debug] [2022-06-30T21:21:48.065Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-czg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-30T21:21:49.473Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-czg:testIamPermissions 200
+[debug] [2022-06-30T21:21:49.473Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-czg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-30T21:21:49.474Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg [none]
+[debug] [2022-06-30T21:21:49.973Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg 200
+[debug] [2022-06-30T21:21:49.974Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg {"projectId":"portfolio-czg","projectNumber":"659480524323","displayName":"portfolio-czg","name":"projects/portfolio-czg","resources":{"hostingSite":"portfolio-czg"},"state":"ACTIVE"}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-06-30T21:21:49.995Z] defaultcredentials: writing to file C:\Users\Waleed Qidan\AppData\Roaming\firebase\intermatter_volcatech_com_application_default_credentials.json
+[debug] [2022-06-30T21:21:49.997Z] Setting GAC to C:\Users\Waleed Qidan\AppData\Roaming\firebase\intermatter_volcatech_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Waleed Qidan\\AppData\\Roaming\\firebase\\intermatter_volcatech_com_application_default_credentials.json"}}
+[debug] [2022-06-30T21:21:49.999Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg/adminSdkConfig [none]
+[debug] [2022-06-30T21:21:50.458Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg/adminSdkConfig 200
+[debug] [2022-06-30T21:21:50.459Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-czg/adminSdkConfig {"projectId":"portfolio-czg","storageBucket":"portfolio-czg.appspot.com"}
+[info] i  functions: Watching "C:\Workspace\Projects\czg\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Workspace\\Projects\\czg\\functions\" for Cloud Functions..."}}
+[debug] [2022-06-30T21:21:50.486Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-06-30T21:21:55.267Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.2",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.13",
+    "firebase-admin": "^8.11.0",
+    "firebase-functions": "^3.6.1",
+    "joi": "^17.6.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}
+[debug] [2022-06-30T21:21:55.267Z] Building nodejs source
+[debug] [2022-06-30T21:21:55.267Z] Analyzing nodejs backend spec
+[warn] !  functions: You are using an old version of firebase-functions SDK (3.6.1). Please update firebase-functions SDK to >=3.20.0 
+[info] +  functions[us-central1-sendEmail]: http function initialized (http://localhost:5000/portfolio-czg/us-central1/sendEmail). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/portfolio-czg/us-central1/sendEmail)."}}
+[debug] [2022-06-30T21:21:59.804Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-06-30T21:21:59.805Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-06-30T21:21:59.806Z] Accepted request GET /portfolio-czg/us-central1/sendEmail?fullName=q&mobile=v&email=v --> us-central1-sendEmail
+[debug] [2022-06-30T21:21:59.822Z] [worker-pool] addWorker(us-central1-sendEmail) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-sendEmail)"}}
+[debug] [2022-06-30T21:21:59.823Z] [worker-pool] Adding worker with key us-central1-sendEmail, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-sendEmail, total=1"}}
+[debug] [2022-06-30T21:21:59.823Z] [worker-pool] submitWork(triggerId=us-central1-sendEmail) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-sendEmail)"}}
+[debug] [2022-06-30T21:21:59.824Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T21:21:59.836Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY"}}
+[debug] [2022-06-30T21:22:02.619Z] [runtime-status] [3304] Functions runtime initialized. {"cwd":"C:\\Workspace\\Projects\\czg\\functions","node_version":"16.15.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Functions runtime initialized. {\"cwd\":\"C:\\\\Workspace\\\\Projects\\\\czg\\\\functions\",\"node_version\":\"16.15.1\"}"}}
+[debug] [2022-06-30T21:22:02.621Z] [runtime-status] [3304] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Disabled runtime features: undefined"}}
+[debug] [2022-06-30T21:22:02.626Z] [runtime-status] [3304] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Workspace\\Projects\\czg\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Workspace\\\\Projects\\\\czg\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-06-30T21:22:02.628Z] [runtime-status] [3304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Workspace\\Projects\\czg\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"C:\\\\Workspace\\\\Projects\\\\czg\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[warn] !  The Cloud Functions emulator requires the module "firebase-functions" to be version >3.13.1 so your version is too old. You can probably fix this by running "npm install firebase-functions@latest" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-functions\" to be version >3.13.1 so your version is too old. You can probably fix this by running \"npm install firebase-functions@latest\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2022-06-30T21:22:03.208Z] [runtime-status] [3304] Beginning invocation function sendEmail! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Beginning invocation function sendEmail!"}}
+[info] i  functions: Beginning execution of "sendEmail" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Beginning execution of \"sendEmail\""}}
+[debug] [2022-06-30T21:22:03.209Z] [runtime-status] [3304] Running sendEmail in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Running sendEmail in signature http"}}
+[debug] [2022-06-30T21:22:03.215Z] [runtime-status] [3304] Attempting to listen to socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T21:22:03.219Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-06-30T21:22:03.220Z] [functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=q&mobile=v&email=v, mapping to path=/?fullName=q&mobile=v&email=v {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=q&mobile=v&email=v, mapping to path=/?fullName=q&mobile=v&email=v"}}
+[debug] [2022-06-30T21:22:03.228Z] [runtime-status] [3304] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server handling GET request"}}
+[debug] [2022-06-30T21:22:03.238Z] [runtime-status] [3304] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server survived."}}
+[info] i  functions: Finished "sendEmail" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Finished \"sendEmail\" in ~1s"}}
+[debug] [2022-06-30T21:22:04.068Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE"}}
+[debug] [2022-06-30T21:22:04.069Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-06-30T21:24:14.281Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-06-30T21:24:14.292Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-06-30T21:24:14.293Z] Accepted request GET /portfolio-czg/us-central1/sendEmail?fullName=b&mobile=f&email=r --> us-central1-sendEmail
+[debug] [2022-06-30T21:24:14.297Z] [worker-pool] submitWork(triggerId=us-central1-sendEmail) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-sendEmail)"}}
+[debug] [2022-06-30T21:24:14.301Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T21:24:14.302Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY"}}
+[debug] [2022-06-30T21:24:14.370Z] [runtime-status] [3304] Beginning invocation function sendEmail! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Beginning invocation function sendEmail!"}}
+[info] i  functions: Beginning execution of "sendEmail" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Beginning execution of \"sendEmail\""}}
+[debug] [2022-06-30T21:24:14.390Z] [runtime-status] [3304] Running sendEmail in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Running sendEmail in signature http"}}
+[debug] [2022-06-30T21:24:14.406Z] [runtime-status] [3304] Attempting to listen to socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T21:24:14.432Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-06-30T21:24:14.440Z] [functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=b&mobile=f&email=r, mapping to path=/?fullName=b&mobile=f&email=r {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=b&mobile=f&email=r, mapping to path=/?fullName=b&mobile=f&email=r"}}
+[debug] [2022-06-30T21:24:14.464Z] [runtime-status] [3304] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server handling GET request"}}
+[debug] [2022-06-30T21:24:14.497Z] [runtime-status] [3304] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server survived."}}
+[info] i  functions: Finished "sendEmail" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Finished \"sendEmail\" in ~1s"}}
+[debug] [2022-06-30T21:24:15.409Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE"}}
+[debug] [2022-06-30T21:24:15.410Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-06-30T22:08:11.160Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-06-30T22:08:11.172Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-06-30T22:08:11.174Z] Accepted request GET /portfolio-czg/us-central1/sendEmail?fullName=null&mobile=null&email=null --> us-central1-sendEmail
+[debug] [2022-06-30T22:08:11.177Z] [worker-pool] submitWork(triggerId=us-central1-sendEmail) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-sendEmail)"}}
+[debug] [2022-06-30T22:08:11.178Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T22:08:11.179Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY"}}
+[debug] [2022-06-30T22:08:11.214Z] [runtime-status] [3304] Beginning invocation function sendEmail! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Beginning invocation function sendEmail!"}}
+[info] i  functions: Beginning execution of "sendEmail" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Beginning execution of \"sendEmail\""}}
+[debug] [2022-06-30T22:08:11.231Z] [runtime-status] [3304] Running sendEmail in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Running sendEmail in signature http"}}
+[debug] [2022-06-30T22:08:11.231Z] [runtime-status] [3304] Attempting to listen to socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T22:08:11.242Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-06-30T22:08:11.246Z] [functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=null&mobile=null&email=null, mapping to path=/?fullName=null&mobile=null&email=null {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=null&mobile=null&email=null, mapping to path=/?fullName=null&mobile=null&email=null"}}
+[debug] [2022-06-30T22:08:11.261Z] [runtime-status] [3304] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server handling GET request"}}
+[debug] [2022-06-30T22:08:11.275Z] [runtime-status] [3304] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server survived."}}
+[info] i  functions: Finished "sendEmail" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Finished \"sendEmail\" in ~1s"}}
+[debug] [2022-06-30T22:08:12.939Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE"}}
+[debug] [2022-06-30T22:08:12.939Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-06-30T22:20:17.266Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-06-30T22:20:17.281Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-06-30T22:20:17.282Z] Accepted request GET /portfolio-czg/us-central1/sendEmail?fullName=v&mobile=d&email=r --> us-central1-sendEmail
+[debug] [2022-06-30T22:20:17.352Z] [worker-pool] submitWork(triggerId=us-central1-sendEmail) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-sendEmail)"}}
+[debug] [2022-06-30T22:20:17.355Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: Assigning socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T22:20:17.355Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: BUSY"}}
+[debug] [2022-06-30T22:20:17.401Z] [runtime-status] [3304] Beginning invocation function sendEmail! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Beginning invocation function sendEmail!"}}
+[info] i  functions: Beginning execution of "sendEmail" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Beginning execution of \"sendEmail\""}}
+[debug] [2022-06-30T22:20:17.426Z] [runtime-status] [3304] Running sendEmail in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Running sendEmail in signature http"}}
+[debug] [2022-06-30T22:20:17.433Z] [runtime-status] [3304] Attempting to listen to socketPath: \\?\pipe\C:\Workspace\Projects\czg\functions\3304 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Workspace\\Projects\\czg\\functions\\3304"}}
+[debug] [2022-06-30T22:20:17.450Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-06-30T22:20:17.453Z] [functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=v&mobile=d&email=r, mapping to path=/?fullName=v&mobile=d&email=r {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/portfolio-czg/us-central1/sendEmail?fullName=v&mobile=d&email=r, mapping to path=/?fullName=v&mobile=d&email=r"}}
+[debug] [2022-06-30T22:20:17.469Z] [runtime-status] [3304] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server handling GET request"}}
+[debug] [2022-06-30T22:20:17.485Z] [runtime-status] [3304] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"[runtime-status] [3304] Ephemeral server survived."}}
+[info] i  functions: Finished "sendEmail" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendEmail"},"extension":{},"message":"Finished \"sendEmail\" in ~1s"}}
+[debug] [2022-06-30T22:20:18.411Z] [worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-sendEmail-6a313a9c-c08c-457b-aa79-bbe77113d9ec]: IDLE"}}
+[debug] [2022-06-30T22:20:18.412Z] [work-queue] {"queueLength":0,"workRunningCount":0}
